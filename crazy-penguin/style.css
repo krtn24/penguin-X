@@ -1,0 +1,59 @@
+body {
+  font-family: 'Comic Sans MS', cursive;
+  background: black;
+  color: lime;
+  text-align: center;
+  animation: flash 0.2s infinite alternate;
+  overflow: hidden;
+}
+
+@keyframes flash {
+  from { background-color: black; color: hotpink; }
+  to { background-color: darkblue; color: yellow; }
+}
+
+h1 {
+  font-size: 2em;
+  text-shadow: 2px 2px #fff;
+}
+
+.game {
+  position: relative;
+  width: 800px;
+  height: 300px;
+  margin: 0 auto;
+  background: radial-gradient(circle, #222, #000);
+  overflow: hidden;
+  border: 5px dashed magenta;
+  transform: rotate(0deg);
+  animation: shake 0.1s infinite alternate;
+}
+
+@keyframes shake {
+  from { transform: rotate(-1deg); }
+  to { transform: rotate(1deg); }
+}
+
+#penguin {
+  width: 80px;
+  height: 80px;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/e/e7/Emperor_Penguin_chick.jpg') no-repeat center / cover;
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+}
+
+#broccoli {
+  width: 80px;
+  height: 80px;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/0/03/Broccoli_and_cross_section_edit.jpg') no-repeat center / cover;
+  position: absolute;
+  bottom: 0;
+  right: -100px;
+  animation: broccoli-move 2.5s linear infinite;
+}
+
+@keyframes broccoli-move {
+  0% { right: -100px; }
+  100% { right: 800px; }
+}
